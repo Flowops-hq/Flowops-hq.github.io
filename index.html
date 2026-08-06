@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FlowOps — the chat is the business</title>
+<title>FlowOps — booking software for car rental companies on WhatsApp</title>
 <meta name="description" content="FlowOps reads a rental company's WhatsApp and turns it into bookings, reminders and money owed. The operator makes every call.">
 <link rel="icon" href="assets/flowops-app-icon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,16 +48,23 @@
   .hero{padding:76px 0 88px}
   .hero h1{
     margin:0;
-    font-size:clamp(34px,6.4vw,56px);
+    font-size:clamp(44px,7.5vw,72px);
     font-weight:200;
-    line-height:1.14;
-    letter-spacing:-.02em;
+    line-height:1.05;
+    letter-spacing:-.03em;
   }
   .hero h1 em{font-style:normal;color:var(--blue)}
+  .hero .lede{
+    margin:30px 0 0;
+    max-width:56ch;
+    font-size:20px;
+    color:var(--ink);
+    font-weight:300;
+  }
   .hero p{
-    margin:28px 0 0;
+    margin:20px 0 0;
     max-width:52ch;
-    font-size:18px;
+    font-size:17px;
     color:var(--muted);
   }
 
@@ -112,7 +119,7 @@
 <header class="masthead">
   <div class="wrap">
     <div class="lockup">
-      <img src="assets/flowops-mark.svg" alt="">
+      <img src="assets/flowops-mark.svg" alt="FlowOps">
       <span class="word">FlowOps</span>
     </div>
   </div>
@@ -121,9 +128,13 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <h1>For rental companies who run<br>the whole business <em>on WhatsApp</em>.</h1>
-      <p>The bookings, the deposits, the car that never came back — it's all sitting in a chat thread
-      nobody has time to scroll. FlowOps reads that thread and keeps the record straight.</p>
+      <h1>FlowOps</h1>
+      <p class="lede">FlowOps is software for car rental companies that run their bookings on
+      WhatsApp. It reads the company's own WhatsApp conversations and turns them into a clear record
+      of bookings, deposits, reminders and money owed, so the person at the desk can see the state
+      of the business without scrolling back through chat threads.</p>
+      <p>Sign in with Google is used only to confirm who you are and create your account. FlowOps
+      does not read your Gmail, Drive or Calendar.</p>
     </div>
   </section>
 
