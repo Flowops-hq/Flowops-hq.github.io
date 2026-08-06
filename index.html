@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlowOps — the chat is the business</title>
+<meta name="description" content="FlowOps reads a rental company's WhatsApp and turns it into bookings, reminders and money owed. The operator makes every call.">
+<link rel="icon" href="assets/flowops-app-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --page:#04060a;
+    --surface:#0B101A;
+    --line:#1B2431;
+    --line-strong:#26334A;
+    --ink:#EAF3FF;
+    --muted:rgba(143,166,192,.75);
+    --faint:#4A5D78;
+    --blue:#58AEFF;
+    --blue-soft:#7CC4FF;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--page);
+    color:var(--ink);
+    font-family:'Jost',system-ui,sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--blue-soft);text-decoration:none}
+  a:hover{color:#B6DEFF}
+  a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:3px}
+
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px}
+
+  /* ---- masthead ---- */
+  .masthead{padding:64px 0 0}
+  .lockup{display:flex;align-items:center;gap:16px}
+  .lockup img{width:42px;height:42px;display:block}
+  .lockup .word{font-size:40px;font-weight:400;line-height:1;letter-spacing:-.005em}
+
+  /* ---- hero ---- */
+  .hero{padding:76px 0 88px}
+  .hero h1{
+    margin:0;
+    font-size:clamp(34px,6.4vw,56px);
+    font-weight:200;
+    line-height:1.14;
+    letter-spacing:-.02em;
+  }
+  .hero h1 em{font-style:normal;color:var(--blue)}
+  .hero p{
+    margin:28px 0 0;
+    max-width:52ch;
+    font-size:18px;
+    color:var(--muted);
+  }
+
+  /* ---- the spine: three nodes, same shape as the mark ---- */
+  .spine{border-top:1px solid var(--line);padding:64px 0}
+  .eyebrow{
+    font-size:12px;font-weight:400;letter-spacing:.42em;
+    color:var(--faint);text-transform:uppercase;margin:0 0 40px;
+  }
+  .steps{list-style:none;margin:0;padding:0}
+  .steps li{
+    position:relative;
+    padding:0 0 40px 40px;
+    border-left:1px solid var(--line-strong);
+  }
+  .steps li:last-child{border-left-color:transparent;padding-bottom:0}
+  .steps li::before{
+    content:"";
+    position:absolute;left:-7px;top:5px;
+    width:13px;height:13px;border-radius:50%;
+    background:var(--blue);
+  }
+  .steps li.decides::before{
+    background:var(--page);
+    border:3px solid var(--blue);
+    left:-9px;width:17px;height:17px;
+  }
+  .steps h2{margin:0;font-size:19px;font-weight:400;letter-spacing:-.01em}
+  .steps p{margin:8px 0 0;color:var(--muted);max-width:50ch}
+
+  /* ---- plain facts ---- */
+  .facts{border-top:1px solid var(--line);padding:64px 0}
+  .facts dl{margin:0;display:grid;gap:28px}
+  .facts dt{font-size:16px;font-weight:400;color:var(--ink)}
+  .facts dd{margin:6px 0 0;color:var(--muted);max-width:56ch}
+
+  /* ---- footer ---- */
+  .foot{border-top:1px solid var(--line);padding:40px 0 72px;font-size:14px;color:var(--faint)}
+  .foot .links{display:flex;flex-wrap:wrap;gap:24px;margin:0 0 16px}
+
+  @media (max-width:560px){
+    .masthead{padding-top:44px}
+    .lockup .word{font-size:32px}
+    .lockup img{width:34px;height:34px}
+    .hero{padding:52px 0 64px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="lockup">
+      <img src="assets/flowops-mark.svg" alt="">
+      <span class="word">FlowOps</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>For rental companies who run<br>the whole business <em>on WhatsApp</em>.</h1>
+      <p>The bookings, the deposits, the car that never came back — it's all sitting in a chat thread
+      nobody has time to scroll. FlowOps reads that thread and keeps the record straight.</p>
+    </div>
+  </section>
+
+  <section class="spine">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <ul class="steps">
+        <li>
+          <h2>A customer messages</h2>
+          <p>The same WhatsApp number the business already uses. Nothing changes for the customer,
+          and nothing new to install.</p>
+        </li>
+        <li>
+          <h2>FlowOps reads it</h2>
+          <p>It picks out the car, the dates, the price agreed and the promises made, and puts them
+          on a booking sheet instead of leaving them buried in the chat.</p>
+        </li>
+        <li class="decides">
+          <h2>You decide</h2>
+          <p>FlowOps never replies on its own and never books a car by itself. It puts the facts in
+          front of the person running the desk, and that person makes the call.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="facts">
+    <div class="wrap">
+      <p class="eyebrow">Plainly</p>
+      <dl>
+        <dt>Who it's for</dt>
+        <dd>Small car rental companies, starting in Dubai. The kind with a handful of cars, one
+        phone, and no software holding it together.</dd>
+
+        <dt>What signing in with Google does</dt>
+        <dd>It confirms who you are, nothing else. FlowOps asks for your name and email address to
+        create your account. It does not read your Gmail, your Drive or your Calendar.</dd>
+
+        <dt>Who can see the business data</dt>
+        <dd>Only the people at that company who have been invited to the account. Customer
+        conversations are never shown to another business and are never sold.</dd>
+
+        <dt>Where it is</dt>
+        <dd>FlowOps is in active development and used daily inside one rental company while it is
+        being built. It is not yet open for general signup.</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="links">
+      <a href="privacy.html">Privacy policy</a>
+      <a href="mailto:flowopssupport@gmail.com">flowopssupport@gmail.com</a>
+    </p>
+    <p>© 2026 FlowOps. Built in Dubai and Lahore.</p>
+  </div>
+</footer>
+
+</body>
+</html>
